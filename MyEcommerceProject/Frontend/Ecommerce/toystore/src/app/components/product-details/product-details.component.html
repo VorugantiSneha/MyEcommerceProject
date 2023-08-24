@@ -1,0 +1,19 @@
+<div class="container-fluid mt-5 pt-5">
+  <div class="row justify-content-md-center">
+    <div class="col-md-4">
+      <img [src]="product.imageUrl" class="detail-img" width="200px" alt="" />
+      <br />
+    </div>
+    <div class="col-md-4">
+      <h3>{{ product.name }}</h3>
+      <div class="price">{{ product.unitPrice | currency : "INR" }}</div>
+
+      <hr />
+      <h4>Description</h4>
+      <p>{{ product.description }}</p>
+      <button class="btn btn-primary btn-sm" (click)="addProductToCart()">
+        Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
